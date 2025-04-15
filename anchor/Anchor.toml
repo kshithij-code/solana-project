@@ -9,10 +9,10 @@ skip-lint = false
 solanaproject = "coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF"
 
 [registry]
-url = "https://api.apr.dev"
+url = "https://localhost:8899"
 
 [provider]
-cluster = "Localnet"
+cluster = "LocalNet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]

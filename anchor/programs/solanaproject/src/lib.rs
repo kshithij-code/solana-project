@@ -1,5 +1,5 @@
+#![allow(warnings)]
 #![allow(clippy::result_large_err)]
-
 use anchor_lang::prelude::*;
 
 declare_id!("coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF");
@@ -13,12 +13,12 @@ pub mod solanaproject {
   }
 
   pub fn decrement(ctx: Context<Update>) -> Result<()> {
-    ctx.accounts.solanaproject.count = ctx.accounts.solanaproject.count.checked_sub(1).unwrap();
+    ctx.accounts.solanaproject.count -= 1;
     Ok(())
   }
 
   pub fn increment(ctx: Context<Update>) -> Result<()> {
-    ctx.accounts.solanaproject.count = ctx.accounts.solanaproject.count.checked_add(1).unwrap();
+    ctx.accounts.solanaproject.count += 1;
     Ok(())
   }
 
