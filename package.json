@@ -7,6 +7,7 @@
     "anchor-build": "cd anchor && anchor build",
     "anchor-localnet": "cd anchor && anchor localnet",
     "anchor-test": "cd anchor && anchor test",
+    "anchor-deploy": "cd anchor && anchor deploy",
     "dev": "next dev",
     "build": "next build",
     "ci": "npm run build",
@@ -29,7 +30,8 @@
     "next": "14.2.24",
     "react": "^18",
     "react-dom": "^18",
-    "react-hot-toast": "^2.5.2"
+    "react-hot-toast": "^2.5.2",
+    "ts-mocha": "^11.1.0"
   },
   "devDependencies": {
     "@types/bn.js": "^5.1.6",

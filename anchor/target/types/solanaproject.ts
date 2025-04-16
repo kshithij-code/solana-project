@@ -5,7 +5,7 @@
  * IDL can be found at `target/idl/solanaproject.json`.
  */
 export type Solanaproject = {
-  "address": "coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF",
+  "address": "2esSSY3A9G7DgR6gUp4zWg4iYhYmWVDZyPgw7cjqcQLR",
   "metadata": {
     "name": "solanaproject",
     "version": "0.1.0",

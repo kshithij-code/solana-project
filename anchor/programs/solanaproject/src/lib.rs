@@ -2,7 +2,7 @@
 #![allow(clippy::result_large_err)]
 use anchor_lang::prelude::*;
 
-declare_id!("coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF");
+declare_id!("2esSSY3A9G7DgR6gUp4zWg4iYhYmWVDZyPgw7cjqcQLR");
 
 #[program]
 pub mod solanaproject {
@@ -13,12 +13,12 @@ pub mod solanaproject {
   }
 
   pub fn decrement(ctx: Context<Update>) -> Result<()> {
-    ctx.accounts.solanaproject.count -= 1;
+    ctx.accounts.solanaproject.count = ctx.accounts.solanaproject.count.checked_sub(1).unwrap();
     Ok(())
   }
 
   pub fn increment(ctx: Context<Update>) -> Result<()> {
-    ctx.accounts.solanaproject.count += 1;
+    ctx.accounts.solanaproject.count = ctx.accounts.solanaproject.count.checked_add(1).unwrap();
     Ok(())
   }
 
@@ -57,6 +57,7 @@ pub struct CloseSolanaproject<'info> {
   pub solanaproject: Account<'info, Solanaproject>,
 }
 
+
 #[derive(Accounts)]
 pub struct Update<'info> {
   #[account(mut)]
@@ -66,5 +67,5 @@ pub struct Update<'info> {
 #[account]
 #[derive(InitSpace)]
 pub struct Solanaproject {
-  count: u8,
+    count: u8,
 }

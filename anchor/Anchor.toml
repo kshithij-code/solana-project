@@ -9,17 +9,17 @@ skip-lint = false
 solanaproject = "coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF"
 
 [registry]
-url = "https://localhost:8899"
+url = " http://localhost:8899"
 
 [provider]
-cluster = "LocalNet"
+cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
 test = "../node_modules/.bin/jest --preset ts-jest"
 
 [test]
-startup_wait = 5000
+startup_wait = 10000
 shutdown_wait = 2000
 upgradeable = false
 

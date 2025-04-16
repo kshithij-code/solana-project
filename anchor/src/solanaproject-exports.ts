@@ -21,7 +21,7 @@ export function getSolanaprojectProgramId(cluster: Cluster) {
     case 'devnet':
     case 'testnet':
       // This is the program ID for the Solanaproject program on devnet and testnet.
-      return new PublicKey('coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF')
+      return new PublicKey('2esSSY3A9G7DgR6gUp4zWg4iYhYmWVDZyPgw7cjqcQLR')
     case 'mainnet-beta':
     default:
       return SOLANAPROJECT_PROGRAM_ID
