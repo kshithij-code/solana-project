@@ -54,7 +54,7 @@ export function SolanaprojectList() {
 }
 
 function SolanaprojectCard({ account }: { account: PublicKey }) {
-  const { accountQuery, incrementMutation, setMutation, decrementMutation, closeMutation } = useSolanaprojectProgramAccount({
+  const { accountQuery, incrementMutation, setMutation, decrementMutation, closeMutation, zeroMutation } = useSolanaprojectProgramAccount({
     account,
   })
 
@@ -76,6 +76,13 @@ function SolanaprojectCard({ account }: { account: PublicKey }) {
               disabled={incrementMutation.isPending}
             >
               Increment
+            </button>
+            <button
+              className="btn btn-xs lg:btn-md btn-outline"
+              onClick={() => zeroMutation.mutateAsync()}
+              disabled={zeroMutation.isPending}
+            >
+              Zero
             </button>
             <button
               className="btn btn-xs lg:btn-md btn-outline"

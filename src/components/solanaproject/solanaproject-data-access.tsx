@@ -94,11 +94,21 @@ export function useSolanaprojectProgramAccount({ account }: { account: PublicKey
     },
   })
 
+  const zeroMutation = useMutation({
+    mutationKey: ['solanaproject', 'zero', { cluster, account }],
+    mutationFn: () => program.methods.zero().accounts({ solanaproject: account }).rpc(),
+    onSuccess: (tx) => {
+      transactionToast(tx)
+      return accountQuery.refetch()
+    },
+  })
+
   return {
     accountQuery,
     closeMutation,
     decrementMutation,
     incrementMutation,
     setMutation,
+    zeroMutation
   }
 }
