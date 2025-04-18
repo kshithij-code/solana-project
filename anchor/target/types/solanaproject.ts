@@ -132,6 +132,26 @@ export type Solanaproject = {
           "type": "u8"
         }
       ]
+    },
+    {
+      "name": "zero",
+      "discriminator": [
+        78,
+        105,
+        181,
+        245,
+        59,
+        237,
+        101,
+        9
+      ],
+      "accounts": [
+        {
+          "name": "solanaproject",
+          "writable": true
+        }
+      ],
+      "args": []
     }
   ],
   "accounts": [

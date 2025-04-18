@@ -30,6 +30,11 @@ pub mod solanaproject {
     ctx.accounts.solanaproject.count = value.clone();
     Ok(())
   }
+
+  pub fn zero(ctx:Context<Update>)->Result<()>{
+    ctx.accounts.solanaproject.count=0;
+    Ok(())
+  }
 }
 
 #[derive(Accounts)]

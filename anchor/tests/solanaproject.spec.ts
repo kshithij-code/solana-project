@@ -52,6 +52,14 @@ describe('solanaproject', () => {
     expect(currentCount.count).toEqual(1)
   })
 
+  it('Zero Solanaproject', async () => {
+    await program.methods.zero().accounts({ solanaproject: solanaprojectKeypair.publicKey }).rpc()
+
+    const currentCount = await program.account.solanaproject.fetch(solanaprojectKeypair.publicKey)
+
+    expect(currentCount.count).toEqual(0)
+  })
+
   it('Set solanaproject value', async () => {
     await program.methods.set(42).accounts({ solanaproject: solanaprojectKeypair.publicKey }).rpc()
 

@@ -6,7 +6,7 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-solanaproject = "coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF"
+solanaproject = "2esSSY3A9G7DgR6gUp4zWg4iYhYmWVDZyPgw7cjqcQLR"
 
 [registry]
 url = " http://localhost:8899"
